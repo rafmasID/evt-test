@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><title>XML source view</title><link rel="stylesheet" type="text/css" href="../xmlverbatim.css"></link></head><body class="xmlverb-default"><tt>
+<!-- converted by xmlverbatim.xsl 1.1, (c) O. Becker -->
+<div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="xmlverb-default">&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d19e1">stylesheet</a></span><span class="xmlverb-ns-name"> xmlns:xsl</span>="<span class="xmlverb-ns-uri">http://www.w3.org/1999/XSL/Transform</span>"<span class="xmlverb-ns-name"> xmlns:xs</span>="<span class="xmlverb-ns-uri">http://www.w3.org/2001/XMLSchema</span>"<span class="xmlverb-ns-name"> xmlns</span>="<span class="xmlverb-ns-uri">http://www.w3.org/1999/xhtml</span>"<span class="xmlverb-ns-name"> xmlns:xd</span>="<span class="xmlverb-ns-uri">http://www.pnp-software.com/XSLTdoc</span>"<span class="xmlverb-ns-name"> xmlns:eg</span>="<span class="xmlverb-ns-uri">http://www.tei-c.org/ns/Examples</span>"<span class="xmlverb-ns-name"> xmlns:fn</span>="<span class="xmlverb-ns-uri">http://www.w3.org/2005/xpath-functions</span>"<span class="xmlverb-ns-name"> xmlns:tei</span>="<span class="xmlverb-ns-uri">http://www.tei-c.org/ns/1.0</span>" <span class="xmlverb-attr-name">xpath-default-namespace</span>="<span class="xmlverb-attr-content">http://www.tei-c.org/ns/1.0</span>" <span class="xmlverb-attr-name">version</span>="<span class="xmlverb-attr-content">2.0</span>" <span class="xmlverb-attr-name">exclude-result-prefixes</span>="<span class="xmlverb-attr-content">#all</span>"&gt;<span class="xmlverb-text"><br></br>
+<br></br>
+        </span><div class="xd">
+
+	&lt;<span class="xmlverb-element-nsprefix">xd</span>:<span class="xmlverb-element-name"><a name="d19e3">doc</a></span> <span class="xmlverb-attr-name">type</span>="<span class="xmlverb-attr-content">stylesheet</span>"&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xd</span>:<span class="xmlverb-element-name"><a name="d19e5">short</a></span>&gt;<span class="xmlverb-text"><br></br>
+                        IT: Questo file è una collezione di parametri e variabili configurabili, usati negli altri moduli.<br></br>
+                </span>&lt;/<span class="xmlverb-element-nsprefix">xd</span>:<span class="xmlverb-element-name">short</span>&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;/<span class="xmlverb-element-nsprefix">xd</span>:<span class="xmlverb-element-name">doc</span>&gt;</div><span class="xmlverb-text"><br></br>
+       <br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> GLOBAL </span>--&gt;<span class="xmlverb-text"><br></br>
+        <br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> Parameters </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> <br></br>
+                Modify Prefix to point to files on your own server, <br></br>
+                or to specify a relatie path, e.g.:<br></br>
+                        &lt;xsl:param name="filePrefix" select="'http://yoursite.com/evtb'"/&gt;<br></br>
+        </span>--&gt;<span class="xmlverb-text">        <br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d19e15">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">mainPrefix</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">'.'</span>" /&gt;<span class="xmlverb-text"> </span>&lt;!--<span class="xmlverb-comment"> index </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d19e20">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">filePrefix</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">'..'</span>" /&gt;<span class="xmlverb-text"> </span>&lt;!--<span class="xmlverb-comment"> image </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d19e24">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">dataPrefix</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">'../..'</span>" /&gt;<span class="xmlverb-text"> </span>&lt;!--<span class="xmlverb-comment"> page </span>--&gt;<span class="xmlverb-text"><br></br>
+        <br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> Hide/Show scans </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d19e30">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">image_frame</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">false()</span>" /&gt;<span class="xmlverb-text"> <br></br>
+<br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> Edition </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;!--<span class="xmlverb-comment"><br></br>
+                IT: Per l'utilizzo nel codice:<br></br>
+                &lt;xsl:value-of select="$edition_array[n]" /&gt;<br></br>
+        </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> IT: Nell'attuale configurazione, per convenzione  </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d19e39">variable</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">edition_array</span>" <span class="xmlverb-attr-name">as</span>="<span class="xmlverb-attr-content">element()*</span>"&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-name"><a name="d19e41">Item</a></span>&gt;<span class="xmlverb-text">Diplomatic</span>&lt;/<span class="xmlverb-element-name">Item</span>&gt;<span class="xmlverb-text"> </span>&lt;!--<span class="xmlverb-comment"> Per l'elaborazione nei moduli: $edition_array[1] </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-name"><a name="d19e46">Item</a></span>&gt;<span class="xmlverb-text">Critical</span>&lt;/<span class="xmlverb-element-name">Item</span>&gt;<span class="xmlverb-text"> </span>&lt;!--<span class="xmlverb-comment"> Per l'elaborazione nei moduli: $edition_array[2] </span>--&gt;<span class="xmlverb-text"><br></br>
+    </span>&lt;/<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name">variable</span>&gt;<span class="xmlverb-text"><br></br>
+        <br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> Variable </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;!--<span class="xmlverb-comment"><br></br>
+        &lt;xsl:variable name="title" select="teiHeader/fileDesc/titleStmt/title" /&gt;<br></br>
+    &lt;xsl:variable name="author" select="teiHeader/fileDesc/titleStmt/author" /&gt;<br></br>
+    &lt;xsl:variable name="publisher" select="teiHeader/fileDesc/publicationStmt/publisher" /&gt;<br></br>
+    &lt;xsl:variable name="pubdate" select="teiHeader/fileDesc/publicationStmt/date" /&gt;<br></br>
+        </span>--&gt;<span class="xmlverb-text">   <br></br>
+</span>&lt;/<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name">stylesheet</span>&gt;<br></br>
+</div>
+</tt><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>v
+         </body></html>

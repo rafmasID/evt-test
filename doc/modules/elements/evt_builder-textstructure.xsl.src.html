@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><title>XML source view</title><link rel="stylesheet" type="text/css" href="../../xmlverbatim.css"></link></head><body class="xmlverb-default"><tt>
+<!-- converted by xmlverbatim.xsl 1.1, (c) O. Becker -->
+<div xmlns:xd="http://www.pnp-software.com/XSLTdoc" class="xmlverb-default">&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e1">stylesheet</a></span><span class="xmlverb-ns-name"> xmlns:xsl</span>="<span class="xmlverb-ns-uri">http://www.w3.org/1999/XSL/Transform</span>"<span class="xmlverb-ns-name"> xmlns:xs</span>="<span class="xmlverb-ns-uri">http://www.w3.org/2001/XMLSchema</span>"<span class="xmlverb-ns-name"> xmlns</span>="<span class="xmlverb-ns-uri">http://www.w3.org/1999/xhtml</span>"<span class="xmlverb-ns-name"> xmlns:xd</span>="<span class="xmlverb-ns-uri">http://www.pnp-software.com/XSLTdoc</span>"<span class="xmlverb-ns-name"> xmlns:eg</span>="<span class="xmlverb-ns-uri">http://www.tei-c.org/ns/Examples</span>"<span class="xmlverb-ns-name"> xmlns:fn</span>="<span class="xmlverb-ns-uri">http://www.w3.org/2005/xpath-functions</span>"<span class="xmlverb-ns-name"> xmlns:tei</span>="<span class="xmlverb-ns-uri">http://www.tei-c.org/ns/1.0</span>" <span class="xmlverb-attr-name">xpath-default-namespace</span>="<span class="xmlverb-attr-content">http://www.tei-c.org/ns/1.0</span>" <span class="xmlverb-attr-name">version</span>="<span class="xmlverb-attr-content">2.0</span>" <span class="xmlverb-attr-name">exclude-result-prefixes</span>="<span class="xmlverb-attr-content">#all</span>"&gt;<span class="xmlverb-text"><br></br>
+        <br></br>
+        </span><div class="xd">
+	
+	&lt;<span class="xmlverb-element-nsprefix">xd</span>:<span class="xmlverb-element-name"><a name="d29e3">doc</a></span> <span class="xmlverb-attr-name">type</span>="<span class="xmlverb-attr-content">stylesheet</span>"&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xd</span>:<span class="xmlverb-element-name"><a name="d29e5">short</a></span>&gt;<span class="xmlverb-text"><br></br>
+                        IT: I template per la trasformazione degli elementi TEI del modulo textstructure<br></br>
+                </span>&lt;/<span class="xmlverb-element-nsprefix">xd</span>:<span class="xmlverb-element-name">short</span>&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;/<span class="xmlverb-element-nsprefix">xd</span>:<span class="xmlverb-element-name">doc</span>&gt;</div><span class="xmlverb-text"><br></br>
+        <br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> Main section </span>--&gt;<span class="xmlverb-text"><br></br>
+         </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e11">template</a></span> <span class="xmlverb-attr-name">match</span>="<span class="xmlverb-attr-content">tei:front</span>"&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e13">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_start</span>" /&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e15">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_end</span>" /&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e17">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">output</span>" /&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-name"><a name="d29e19">br</a></span> /&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e21">apply-templates</a></span>&gt;<span class="xmlverb-text"><br></br>
+                        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e23">with-param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_start</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">$pp_start</span>" /&gt;<span class="xmlverb-text"><br></br>
+                        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e25">with-param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_end</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">$pp_end</span>" /&gt;<span class="xmlverb-text"><br></br>
+                        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e27">with-param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">output</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">$output</span>" /&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;/<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name">apply-templates</span>&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;/<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name">template</span>&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;!--<span class="xmlverb-comment"><br></br>
+        &lt;xsl:template match="tei:body"&gt;<br></br>
+                &lt;xsl:param name="pp_start"/&gt;<br></br>
+                &lt;xsl:param name="pp_end"/&gt;<br></br>
+                &lt;xsl:param name="output"/&gt;<br></br>
+        &lt;br /&gt;<br></br>
+                &lt;xsl:apply-templates&gt;<br></br>
+                        &lt;xsl:with-param name="pp_start" select="$pp_start"/&gt;<br></br>
+                        &lt;xsl:with-param name="pp_end" select="$pp_end"/&gt;<br></br>
+                        &lt;xsl:with-param name="output" select="$output"/&gt;<br></br>
+                &lt;/xsl:apply-templates&gt;<br></br>
+        &lt;/xsl:template&gt;<br></br>
+        </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e33">template</a></span> <span class="xmlverb-attr-name">match</span>="<span class="xmlverb-attr-content">tei:back</span>"&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e35">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_start</span>" /&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e37">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_end</span>" /&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e39">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">output</span>" /&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-name"><a name="d29e41">br</a></span> /&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e43">apply-templates</a></span>&gt;<span class="xmlverb-text"><br></br>
+                        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e45">with-param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_start</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">$pp_start</span>" /&gt;<span class="xmlverb-text"><br></br>
+                        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e47">with-param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_end</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">$pp_end</span>" /&gt;<span class="xmlverb-text"><br></br>
+                        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e49">with-param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">output</span>" <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">$output</span>" /&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;/<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name">apply-templates</span>&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;/<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name">template</span>&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;!--<span class="xmlverb-comment"><br></br>
+        &lt;xsl:template match="tei:div"&gt;<br></br>
+                &lt;xsl:param name="pp_start"/&gt;<br></br>
+                &lt;xsl:param name="pp_end"/&gt;<br></br>
+                &lt;xsl:param name="output"/&gt;<br></br>
+                &lt;hr width="75%"/&gt;<br></br>
+                &lt;xsl:apply-templates&gt;<br></br>
+                        &lt;xsl:with-param name="pp_start" select="$pp_start"/&gt;<br></br>
+                        &lt;xsl:with-param name="pp_end" select="$pp_end"/&gt;<br></br>
+                        &lt;xsl:with-param name="output" select="$output"/&gt;<br></br>
+                        <br></br>
+                &lt;/xsl:apply-templates&gt;<br></br>
+        &lt;/xsl:template&gt;<br></br>
+        </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> Altro test<br></br>
+                <br></br>
+        &lt;xsl:template match="tei:div"&gt;<br></br>
+                &lt;xsl:param name="pp_start"/&gt;<br></br>
+                &lt;xsl:param name="pp_end"/&gt;<br></br>
+                &lt;xsl:param name="output"/&gt;<br></br>
+                <br></br>
+                &lt;xsl:for-each select="l[not(following::tei:pb[@n=$pp_start/@n]) and not(preceding::tei:pb[@n=$pp_end/@n])]"&gt;<br></br>
+                &lt;p class="verse"&gt;<br></br>
+                        &lt;xsl:apply-templates&gt;<br></br>
+                                &lt;xsl:with-param name="pp_start" select="$pp_start"/&gt;<br></br>
+                                &lt;xsl:with-param name="pp_end" select="$pp_end"/&gt;<br></br>
+                                &lt;xsl:with-param name="output" select="$output"/&gt;<br></br>
+                        &lt;/xsl:apply-templates&gt;<br></br>
+                &lt;/p&gt;<br></br>
+                &lt;/xsl:for-each&gt;<br></br>
+        &lt;/xsl:template&gt;<br></br>
+        <br></br>
+        </span>--&gt;<span class="xmlverb-text"><br></br>
+<br></br>
+        </span>&lt;!--<span class="xmlverb-comment"> <br></br>
+        Template for the text node . <br></br>
+        Three parameters : pp_start, pp_end and output. And then : <br></br>
+                &lt;xsl:if test="not(following::tei:pb[@n=$pp_start/@n]) and not(preceding::tei:pb[@n=$pp_end/@n])"&gt; <br></br>
+        -When we are before the pagebreak where we are (not(following::tei:pb[@n=$pp_start/@n])) : no treatment. <br></br>
+        -When we are after the next pagebreak on which we are (not(preceding::tei:pb[@n=$pp_end/@n])) : no treatment. <br></br>
+        In other words, when we are not before the pb or after the next pagebreak, we apply a treatment. In this case, value-of on all the text <br></br>
+        </span>--&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e60">template</a></span> <span class="xmlverb-attr-name">match</span>="<span class="xmlverb-attr-content">text()</span>"&gt;<span class="xmlverb-text"><br></br>
+                </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e62">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_start</span>" /&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e64">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">pp_end</span>" /&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e66">param</a></span> <span class="xmlverb-attr-name">name</span>="<span class="xmlverb-attr-content">output</span>" /&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e68">if</a></span> <span class="xmlverb-attr-name">test</span>="<span class="xmlverb-attr-content">not(following::tei:pb[@n=$pp_start/@n]) and not(preceding::tei:pb[@n=$pp_end/@n])</span>"&gt;<span class="xmlverb-text"><br></br>
+            </span>&lt;<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name"><a name="d29e70">value-of</a></span> <span class="xmlverb-attr-name">select</span>="<span class="xmlverb-attr-content">.</span>" /&gt;<span class="xmlverb-text"><br></br>
+        </span>&lt;/<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name">if</span>&gt;<span class="xmlverb-text"><br></br>
+    </span>&lt;/<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name">template</span>&gt;<span class="xmlverb-text">        <br></br>
+        <br></br>
+                <br></br>
+</span>&lt;/<span class="xmlverb-element-nsprefix">xsl</span>:<span class="xmlverb-element-name">stylesheet</span>&gt;<br></br>
+</div>
+</tt><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>v
+         </body></html>
