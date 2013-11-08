@@ -560,13 +560,24 @@ white-space: pre-line;
 }
 
 
-#thumb_cont{
+/*#thumb_cont{
 	display: none;
 	position: relative;
 	top: 100px;
 	margin: 0 auto;
 	width: 416px;
 	height: 100px;
+}*/
+
+#thumb_cont{
+display: none;
+position: relative;
+top: 100px;
+margin: 0 auto;
+width: 436px;
+height: 73%;
+overflow: scroll;
+overflow-x: hidden;
 }
 
 #thumb_cont figure{
