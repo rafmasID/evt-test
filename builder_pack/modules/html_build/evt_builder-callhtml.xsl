@@ -122,6 +122,7 @@
 									<!-- EN: If the surface element is present first of all we apply the text-image link template, to which only the pb is passed -->
 									<!-- IT: Se c'è il surface viene applicato per primo il template per il collegamento testo-immagine al quale devo passare solo il pb -->
 									<xsl:when test="//tei:facsimile/tei:surface[substring(@xml:id, string-length(@xml:id)-3)=$pb_n]">
+										<!--<xsl:copy-of select="current-group()"/>-->
 										<xsl:apply-templates select="." mode="facs">
 											<xsl:with-param name="n" select="$pb_n"/>
 										</xsl:apply-templates>

@@ -65,5 +65,15 @@
     <xsl:variable name="author" select="teiHeader/fileDesc/titleStmt/author" />
     <xsl:variable name="publisher" select="teiHeader/fileDesc/publicationStmt/publisher" />
     <xsl:variable name="pubdate" select="teiHeader/fileDesc/publicationStmt/date" />
-	-->   
+	-->
+	
+	<!-- Punto di partenza per la divisione degli elementi contententi pb/lb -->
+	<xsl:variable name="start_split" select="if(//tei:body/tei:div) then(//tei:body/tei:div/name()) else(//tei:body/name())"/>
+	<!-- Indica la profondità massima dei pb/lb rispetto all'elemento inserito della variabile $start_split-->
+	<xsl:variable name="start_split_depth" select="//node()[name()=$start_split]/count(ancestor-or-self::node())"/>
+	<xsl:variable name="max_depth" as="xs:integer" select="max(((max(//tei:pb/count(ancestor-or-self::node())) - //node()[name()=$start_split]/count(ancestor-or-self::node())), (max(//tei:lb/count(ancestor-or-self::node())) - //node()[name()=$start_split]/count(ancestor-or-self::node()))))"/>
+	<!-- Profondità massima di un pb rispetto a body: max(//tei:pb/count(ancestor-or-self::node())) - //tei:body/count(ancestor-or-self::node()) 
+		 Profondità massima di un lb rispetto a body: max(//tei:lb/count(ancestor-or-self::node())) - //tei:body/count(ancestor-or-self::node())
+	-->
+	
 </xsl:stylesheet>

@@ -150,7 +150,7 @@
 									</xsl:call-template>-->
 
 								<!--<xsl:copy-of select="//tei:text/tei:body/tei:div/descendant::node()" copy-namespaces="no"/>-->
-								<xsl:for-each-group select="//tei:text/tei:body/node()"
+								<xsl:for-each-group select="//tei:text//node()[name()=$start_split]/node()"
 									group-starting-with="//tei:lb|//tei:pb">
 									<xsl:if test="current()[translate(@facs, '#', '') = $CurrAnnId]">
 										<xsl:element name="li">
