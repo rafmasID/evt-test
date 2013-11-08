@@ -31,17 +31,16 @@
 	
 	<xsl:output indent="yes" method="html" encoding="UTF-8"
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"/>	
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"/>
 	
 	<xsl:template name="page">
-		<xsl:param name="pb_n"></xsl:param>
+		<xsl:variable name="pb_n"><xsl:value-of select="./@n"></xsl:value-of></xsl:variable>
 		<!-- IT: Per ogni pagina, genera le corrispettive edizioni. Il template data_structure si trova in html_build/evt_builder-callhtml.xsl -->
 		<xsl:if test="$edition_array[1]!=''">
 			<xsl:variable name="edition_current" select="lower-case($edition_array[1])" />
 			<xsl:result-document method="html" href="{$filePrefix}/data/output_data/{$edition_current}/page_{$pb_n}_{$edition_current}.html" indent="yes">
 				<xsl:call-template name="data_structure">
-					<xsl:with-param name="pb_n" select="$pb_n"/>	<!-- Added by JK-->
-					<xsl:with-param name="output" select="$edition_current"/> <!--$edition_array[1] changed in $edition_current by JK-->
+					<xsl:with-param name="output" select="$edition_current"/>
 				</xsl:call-template>
 			</xsl:result-document>
 		</xsl:if>
@@ -49,7 +48,6 @@
 			<xsl:variable name="edition_current" select="lower-case($edition_array[2])" />
 			<xsl:result-document method="html" href="{$filePrefix}/data/output_data/{$edition_current}/page_{$pb_n}_{$edition_current}.html" indent="yes">
 				<xsl:call-template name="data_structure">
-					<xsl:with-param name="pb_n" select="$pb_n"/>	<!-- Added by JK-->
 					<xsl:with-param name="output" select="$edition_current"/>
 				</xsl:call-template>
 			</xsl:result-document>
@@ -63,7 +61,6 @@
 			<xsl:variable name="edition_current" select="lower-case($edition_array[3])" />
 			<xsl:result-document method="html" href="{$filePrefix}/data/output_data/{$edition_current}/page_{$pb_n}_{$edition_current}.html" indent="yes">
 				<xsl:call-template name="data_structure">
-					<xsl:with-param name="pb_n" select="$pb_n"/>
 					<xsl:with-param name="output" select="$edition_current"/>
 				</xsl:call-template>
 			</xsl:result-document>

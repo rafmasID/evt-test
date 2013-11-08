@@ -47,6 +47,7 @@
 						<xsl:value-of>facs-choice_popup</xsl:value-of>
 					</xsl:attribute>
 					<xsl:apply-templates select="tei:reg" mode="#current"> </xsl:apply-templates>
+					<xsl:sequence select="' '"/>
 					<xsl:apply-templates select="tei:orig" mode="#current"> </xsl:apply-templates>
 				</xsl:element>
 			</xsl:when>

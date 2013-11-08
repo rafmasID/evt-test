@@ -246,17 +246,73 @@
 	
 	<xsl:template match="/" priority="1">
 		<xsl:apply-templates select="$step0" mode="splitPages"></xsl:apply-templates>
+		<xsl:apply-templates select="$step0" mode="xml4research"></xsl:apply-templates>
 	</xsl:template>
+	
+	<xsl:template match="*" mode="xml4research">
+		<!-- IT: Per ogni pagina, genera le corrispettive edizioni. Il template data_structure si trova in html_build/evt_builder-callhtml.xsl -->
+		<xsl:if test="$edition_array[1]!=''">
+			<xsl:variable name="edition_current" select="lower-case($edition_array[1])" />
+			<xsl:result-document method="xml" href="{$filePrefix}/data/output_data/{$edition_current}/{$edition_current}.xml" indent="yes">
+				<xml>
+				<xsl:for-each-group select="//tei:text//node()[name()=$start_split]/node()" group-starting-with="//tei:pb">
+					<pagina>
+						<xsl:attribute name="n" select="if(./@n) then(./@n) else('no page info')"></xsl:attribute>
+						<xsl:choose>
+							<xsl:when test="current-group()/(descendant-or-self::lb)">
+								<xsl:for-each-group select="current-group()[not(self::pb)]" group-starting-with="tei:lb">
+									<line>
+										<xsl:attribute name="n" select="if(./@n) then(./@n) else('no line info')"></xsl:attribute>
+										<xsl:variable name="var"><xsl:apply-templates select="current-group()[not(self::tei:lb)]" mode="facs"/></xsl:variable>
+										<xsl:copy-of select="$var//text()"></xsl:copy-of>
+									</line>
+								</xsl:for-each-group>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:variable name="var"><xsl:apply-templates select="current-group()[not(self::tei:pb)]" mode="facs"/></xsl:variable>
+								<xsl:copy-of select="$var//text()"></xsl:copy-of>
+							</xsl:otherwise>
+						</xsl:choose>
+					</pagina>
+				</xsl:for-each-group>
+				</xml>
+			</xsl:result-document>
+		</xsl:if>
+		<xsl:if test="$edition_array[2]!=''">
+			<xsl:variable name="edition_current" select="lower-case($edition_array[2])" />
+			<xsl:result-document method="html" href="{$filePrefix}/data/output_data/{$edition_current}/xml_{$edition_current}.html" indent="yes">
+				<xsl:for-each-group select="//tei:text//node()[name()=$start_split]/node()" group-starting-with="//tei:pb">
+					<pagina>
+						<xsl:attribute name="n" select="if(./@n) then(./@n) else('no page info')"></xsl:attribute>
+						<xsl:choose>
+							<xsl:when test="current-group()/(descendant-or-self::lb)">
+								<xsl:for-each-group select="current-group()[not(self::pb)]" group-starting-with="tei:lb">
+									<line>
+										<xsl:attribute name="n" select="if(./@n) then(./@n) else('no line info')"></xsl:attribute>
+										<xsl:variable name="var"><xsl:apply-templates select="current-group()[not(self::tei:lb)]" mode="dipl"/></xsl:variable>
+										<xsl:copy-of select="$var//text()"></xsl:copy-of>
+									</line>
+								</xsl:for-each-group>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:variable name="var"><xsl:apply-templates select="current-group()[not(self::tei:pb)]" mode="dipl"/></xsl:variable>
+								<xsl:copy-of select="$var//text()"></xsl:copy-of>
+							</xsl:otherwise>
+						</xsl:choose>
+					</pagina>
+				</xsl:for-each-group>
+			</xsl:result-document>
+		</xsl:if>
+	</xsl:template>
+	
 	
 	<!--EN: Calls the page template for every page -->
 	<!--IT: Per ogni pagina chiama il template page -->
 	<xsl:template match="*" mode="splitPages">
 		<!--<xsl:copy-of select="*"></xsl:copy-of>-->
 		<xsl:for-each-group select="//tei:text//node()[name()=$start_split]/node()" group-starting-with="//tei:pb">
-			<xsl:if test="self::tei:pb">
-				<xsl:call-template name="page"> <!-- See: evt_builder-main -->
-					<xsl:with-param name="pb_n" select="@n"/>	
-				</xsl:call-template>
+			<xsl:if test="self::tei:pb"> <!--IT: test per non creare una pagina per un gruppo che non inizia con pb (puo succedere al primo gruppo)  -->
+				<xsl:call-template name="page"/> <!-- See: evt_builder-main -->
 			</xsl:if>
 		</xsl:for-each-group>
 		<!--EN: Calls the template that generates the index -->

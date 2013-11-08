@@ -104,8 +104,8 @@
 	</xsl:template>
 
 	<xsl:template name="data_structure">
-		<xsl:param name="pb_n"/>
 		<xsl:param name="output"/>
+		<xsl:variable name="pb_n"><xsl:value-of select="./@n"></xsl:value-of></xsl:variable>
 
 		<html lang="en-US">
 			<xsl:call-template name="html_head">
@@ -122,17 +122,13 @@
 									<!-- EN: If the surface element is present first of all we apply the text-image link template, to which only the pb is passed -->
 									<!-- IT: Se c'è il surface viene applicato per primo il template per il collegamento testo-immagine al quale devo passare solo il pb -->
 									<xsl:when test="//tei:facsimile/tei:surface[substring(@xml:id, string-length(@xml:id)-3)=$pb_n]">
-										<!--<xsl:copy-of select="current-group()"/>-->
-										<xsl:apply-templates select="." mode="facs">
-											<xsl:with-param name="n" select="$pb_n"/>
-										</xsl:apply-templates>
+										<!--<xsl:copy-of select="current-group()"/>--><!-- use it to check errors -->
+										<xsl:apply-templates select="." mode="facs"/>
 									</xsl:when>
 									<!-- EN: If the surface element is not present only the diplomatic edition templates are applied; those need all the page content -->
 									<!-- IT: Se non c'è il surface devo applicare direttamente i templates per l'edizione diplomatica; a questi devo passare tutto il contenuto della pagina -->
 									<xsl:otherwise>
-										<xsl:apply-templates select="current-group()" mode="facs">
-											<xsl:with-param name="n" select="$pb_n"/>
-										</xsl:apply-templates>
+										<xsl:apply-templates select="current-group()" mode="facs"/>
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:if>
@@ -148,9 +144,7 @@
 									<!-- EN: If the surface element is not present only the diplomatic edition templates are applied; those need all the page content -->
 									<!-- IT: Se non c'è il surface devo applicare direttamente i templates per l'edizione diplomatica; a questi devo passare tutto il contenuto della pagina -->
 									<xsl:otherwise>
-										<xsl:apply-templates select="current-group()" mode="dipl">
-											<xsl:with-param name="n" select="$pb_n"/>
-										</xsl:apply-templates>
+										<xsl:apply-templates select="current-group()" mode="dipl"/>
 									</xsl:otherwise>
 								</xsl:choose>
 							</xsl:if>
