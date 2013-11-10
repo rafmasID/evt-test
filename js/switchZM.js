@@ -1,12 +1,5 @@
 /**
- * -- prima modifica ops ---
-
- --- seconda modifica ops -- 
- * @author JK
- * @since 2012 gatto matto
- * cambiamento in ops
- *
- * commento da non visualizzare in master by opsa 2
+ *ecco il secondo
  **/
  
 var magnifierON = false;
