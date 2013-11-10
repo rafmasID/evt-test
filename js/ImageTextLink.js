@@ -2,15 +2,7 @@
 
 /* This is the JavaScript code used to display the Web view of the image markup project. */
 
-/* secondo cambiamento opsa2 da merge
-     Version 1.3.
-     
-     Started work on this December 5 2005.
-     
-     Image Markup Tool Web View JavaScript  file.to support Web View functionality.
-     December 2005 - April 2008.
-     
-     LICENSE
+/* ecco il terzo
      
      The contents of this file are subject to the Mozilla Public License Version
      1.1 (the "License"); you may not use this file except in compliance with
