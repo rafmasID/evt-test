@@ -2,7 +2,7 @@
 
 /* This is the JavaScript code used to display the Web view of the image markup project. */
 
-/*
+/* secondo cambiamento opsa2 da merge
      Version 1.3.
      
      Started work on this December 5 2005.

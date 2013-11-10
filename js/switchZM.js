@@ -4,6 +4,7 @@
  * @since 2012 gatto matto
  * cambiamento in ops
  *
+ * commento da non visualizzare in master by opsa 2
  **/
  
 var magnifierON = false;
