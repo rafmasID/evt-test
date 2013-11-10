@@ -23,7 +23,7 @@
      
 */
 
-/*Modified by JK*/
+/*Modified by JK !!!*/
 
 //We need to know if this is the dreadful IE6 or below -- it can't handle key CSS features.
 
