@@ -7,7 +7,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
  * 
- * @author RafMas questo qui!
+ * @author RafMas questo qui! --- terza modifica opz ---
  * @since 2012
  *
  **/
