@@ -48,8 +48,7 @@ var HeightOffset;
 var selectedAreaHeightOffset;
 var ImgLeft;
 var selectedAreaImgLeft;
-var ImgWidth;
-var ImgRight;
+
 var ImgBottom;
 var ImgHeight;
 var ViewWidth;
@@ -57,6 +56,10 @@ var WindowHeight;
 var Ratio;
 var click;
 var Initializing = true;
+
+
+var ImgWidth;
+var ImgRight;
 
 
 function Initialize(){
