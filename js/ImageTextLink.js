@@ -2,7 +2,7 @@
 
 /* This is the JavaScript code used to display the Web view of the image markup project. */
 
-/*
+/* Finirà pure questo?
      
      The contents of this file are subject to the Mozilla Public License Version
      1.1 (the "License"); you may not use this file except in compliance with
