@@ -1,5 +1,5 @@
 /**
- *ecco il secondo
+ finirà in master?
  **/
  
 var magnifierON = false;
